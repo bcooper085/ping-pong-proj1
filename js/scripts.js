@@ -5,15 +5,16 @@ var storage = [];
 function counter(num) {
   var start = 0;
   while (start <= num) {
-    console.log(start);
+    storage.push(start);
     start++;
   }
-
+}
 
 $(function() {
   $('form').submit(function() {
     var num = $("#userInput").val();
-    // $('.output').text(results);
+    counter(num);
+    $('.output').text(storage);
     event.preventDefault();
   });
 });
