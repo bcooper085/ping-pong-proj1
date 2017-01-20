@@ -4,18 +4,18 @@ var storage = [];
 // var parsed = parseInt(storage[i]);
 
 function counter(num) {
-  var start = 0;
+  var start = 1;
   while (start <= num) {
     storage.push(start);
     start++;
   }
   for (var i = 0; i <= storage.length; i++) {
       if (storage[i] % 15 === 0) {
-        storage[i] += "ping-pong";
+        storage[i] = "ping-pong";
       } else if (storage[i] % 5 === 0) {
-        storage[i] += "pong";
+        storage[i] = "pong";
       } else if (storage[i] % 3 === 0) {
-        storage[i] += "ping"
+        storage[i] = "ping"
       }
     }
 }
