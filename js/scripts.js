@@ -1,7 +1,5 @@
-var userInput;
-var results;
 var storage = [];
-// var parsed = parseInt(storage[i]);
+var list = [];
 
 function counter(num) {
   var start = 1;
@@ -10,21 +8,25 @@ function counter(num) {
     start++;
   }
   for (var i = 0; i <= storage.length; i++) {
-      if (storage[i] % 15 === 0) {
-        storage[i] = "ping-pong";
-      } else if (storage[i] % 5 === 0) {
-        storage[i] = "pong";
-      } else if (storage[i] % 3 === 0) {
-        storage[i] = "ping"
-      }
+    if (storage[i] % 15 === 0) {
+      storage[i] = "ping-pong";
+    } else if (storage[i] % 5 === 0) {
+      storage[i] = "pong";
+    } else if (storage[i] % 3 === 0) {
+      storage[i] = "ping";
     }
+  }
+  for (var i = 0; i <= storage.length - 1; i++) {
+    list.push('<li>' + storage[i] + '</li>');
+  }
 }
+
 
 $(function() {
   $('form').submit(function() {
     var num = $("#userInput").val();
     counter(num);
-    $('.output').text(storage);
+    $(".output").html(list);
     event.preventDefault();
   });
 });
