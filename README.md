@@ -8,8 +8,6 @@
 * App can count up to the number provided.
 **Input:** 2 **Output:** [1, 2]
 
-* App will confirm user input is a valid number. **Input** "x" **Output** "x is not a valid number"
-
 * App will convert all numbers in array divisible by 3 to "ping". **Input:** 3 **Output** "ping"
 
 * App will convert all numbers in array divisible by 3 to "ping". **Input:** 5 **Output** "pong"
@@ -19,6 +17,8 @@
 * App will display list of numbers and converted numbers on page [1 2 ping 4 pong ping 7].
 
 * App will remove previous list from page and show new list on page when new number is entered.
+
+* App will confirm user input is a valid number. **Input** "x" **Output** "x is not a valid number"
 
 ## Setup
 
