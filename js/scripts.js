@@ -9,20 +9,15 @@ function counter(num) {
     storage.push(start);
     start++;
   }
-
-  function converter(num) {
-    for (var i = 0; i <= storage.length; i++) {
-      if (i % 15 === 0) {
-        storage[i] = "ping-pong";
-      } else if (i % 5 === 0) {
-        storage[i] = "pong";
-      } else if (i % 3 === 0) {
-        storage[i] = "ping"
+  for (var i = 0; i <= storage.length; i++) {
+      if (storage[i] % 15 === 0) {
+        storage[i] += "ping-pong";
+      } else if (storage[i] % 5 === 0) {
+        storage[i] += "pong";
+      } else if (storage[i] % 3 === 0) {
+        storage[i] += "ping"
       }
-      return storage;
     }
-  }
-
 }
 
 $(function() {
