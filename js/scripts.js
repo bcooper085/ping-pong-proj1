@@ -1,7 +1,7 @@
-var storage = [];
 var list = [];
 
 function counter(num) {
+  var storage = [];
   var start = 1;
   while (start <= num) {
     storage.push(start);
@@ -27,6 +27,7 @@ $(function() {
     var num = $("#userInput").val();
     counter(num);
     $(".output").html(list);
+    $('form').reset();
     event.preventDefault();
   });
 });
