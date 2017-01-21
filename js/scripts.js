@@ -1,4 +1,4 @@
-var list = [];
+var final;
 
 function verify(num) {
   if(isNaN(num)) {
@@ -9,6 +9,7 @@ function verify(num) {
 }
 
 function counter(num) {
+  var list = [];
   var storage = [];
   var start = 1;
   while (start <= num) {
@@ -27,14 +28,14 @@ function counter(num) {
   for (var i = 0; i <= storage.length - 1; i++) {
     list.push('<li>' + storage[i] + '</li>');
   }
+  final = list;
 }
-
 
 $(function() {
   $('form').submit(function() {
     var num = $("#userInput").val();
     verify(num);
-    $(".output").html(list);
+    $(".output").html(final);
     event.preventDefault();
   });
 });

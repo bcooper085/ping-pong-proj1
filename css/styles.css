@@ -11,7 +11,16 @@ h5 {
 }
 
 body {
-  background-color: rgb(220, 220, 220);
+    background-color: rgb(220, 220, 220);
+}
+
+.container {
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+  
 }
 
 .col-md-3 {
