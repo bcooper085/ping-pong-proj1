@@ -1,5 +1,13 @@
 var list = [];
 
+function verify(num) {
+  if(isNaN(num)) {
+    alert('Please enter a number.');
+  } else {
+    counter(num);
+  }
+}
+
 function counter(num) {
   var storage = [];
   var start = 1;
@@ -25,9 +33,8 @@ function counter(num) {
 $(function() {
   $('form').submit(function() {
     var num = $("#userInput").val();
-    counter(num);
+    verify(num);
     $(".output").html(list);
-    $('form').reset();
     event.preventDefault();
   });
 });
